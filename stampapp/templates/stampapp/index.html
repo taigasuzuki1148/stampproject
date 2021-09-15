@@ -1,0 +1,44 @@
+% load static %
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <p>{{message|safe}}</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Unit</th>
+            <th>Question1</th>
+            <th>Answer1</th>
+
+            <th>Question2</th>
+            <th>Answer2</th>
+            
+            <th>Question3</th>
+            <th>Answer3</th>
+        </tr>
+    {% for in item in data %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.mail}}</td>
+            <td>{{item.unit}}</td>
+
+            <td>{{item.question1}}</td>
+            <td>{{item.answer1}}</td>
+
+            <td>{{item.question2}}</td>
+            <td>{{item.answer2}}</td>
+
+            <td>{{item.question3}}</td>
+            <td>{{item.answer3}}</td>
+
+        </tr>
+    </table>
+</body>
